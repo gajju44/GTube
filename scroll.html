@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrollable Container</title>
+<style>
+    /* Add your CSS styles here */
+    .scroll-btn-left, .scroll-btn-right {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .scrollableDiv {
+        overflow-x: hidden;
+        white-space: nowrap;
+        width: 300px; /* Adjust as needed */
+        border: 1px solid black;
+    }
+    .btncontainer {
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .catagory-btn {
+        margin: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div>
+    <div class="scroll-btn-left">
+        <button class="scroll-btn" id="scrollLeftBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" focusable="false">
+                <path d="M14.96 18.96 8 12l6.96-6.96.71.71L9.41 12l6.25 6.25-.7.71z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div class="scrollableDiv" id="scrollableDiv">
+        <div class="btncontainer">
+            <button class="catagory-btn">barcelona</button>
+            <button class="catagory-btn">tarak mehta</button>
+            <button class="catagory-btn">jethalal</button>
+            <button class="catagory-btn">daya</button>
+            <button class="catagory-btn">tipendra gada</button>
+            <button class="catagory-btn">champaklal jayantilal gada</button>
+            <button class="catagory-btn">sudarlal</button>
+            <button class="catagory-btn">daya ki  ma</button>
+            <button class="catagory-btn">anjali</button>
+            <button class="catagory-btn">babita</button>
+            <button class="catagory-btn">aiyar</button>
+            <button class="catagory-btn">bhije</button>
+            <button class="catagory-btn">ek mev secretary</button>
+            <button class="catagory-btn">sakharam</button>
+            <button class="catagory-btn">15</button>
+            <button class="catagory-btn">16</button>
+            <button class="catagory-btn">17</button>
+            <button class="catagory-btn">1</button>
+            <button class="catagory-btn">2</button>
+            <button class="catagory-btn">3</button>
+            <button class="catagory-btn">4</button>
+            <button class="catagory-btn">5</button>
+            <button class="catagory-btn">6</button>
+            <button class="catagory-btn">7</button>
+            <button class="catagory-btn">8</button>
+            <button class="catagory-btn">9</button>
+            <button class="catagory-btn">10</button>
+            <button class="catagory-btn">11</button>
+            <button class="catagory-btn">12</button>
+            <button class="catagory-btn">13</button>
+            <button class="catagory-btn">14</button>
+            <button class="catagory-btn">15</button>
+            <button class="catagory-btn">16</button>
+            <button class="catagory-btn">17</button>
+            <button class="catagory-btn">6</button>
+            <button class="catagory-btn">7</button>
+            <button class="catagory-btn">8</button>
+            <button class="catagory-btn">9</button>
+            <button class="catagory-btn">10</button>
+            <button class="catagory-btn">11</button>
+            <button class="catagory-btn">12</button>
+            <button class="catagory-btn">13</button>
+            <button class="catagory-btn">14</button>
+            <button class="catagory-btn">15</button>
+            <button class="catagory-btn">16</button>
+            <button class="catagory-btn">17</button>
+            <button class="catagory-btn">1</button>
+            <button class="catagory-btn">2</button>
+            <button class="catagory-btn">3</button>
+            <button class="catagory-btn">4</button>
+            <button class="catagory-btn">5</button>
+            <button class="catagory-btn">6</button>
+            <button class="catagory-btn">7</button>
+            <button class="catagory-btn">8</button>
+            <button class="catagory-btn">9</button>
+            <button class="catagory-btn">10</button>
+            <button class="catagory-btn">11</button>
+            <button class="catagory-btn">12</button>
+            <button class="catagory-btn">13</button>
+            <button class="catagory-btn">14</button>
+            <button class="catagory-btn">15</button>
+            <button class="catagory-btn">16</button>
+            <button class="catagory-btn">17</button>
+        </div>
+    </div>
+
+    <div class="scroll-btn-right">
+        <button class="scroll-btn" id="scrollRightBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" focusable="false">
+                <path d="m9.4 18.4-.7-.7 5.6-5.6-5.7-5.7.7-.7 6.4 6.4-6.3 6.3z"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle scroll button clicks
+    document.getElementById("scrollRightBtn").addEventListener("click", function() {
+        document.getElementById("scrollableDiv").scrollLeft += 50; // Adjust scroll amount as needed
+    });
+
+    document.getElementById("scrollLeftBtn").addEventListener("click", function() {
+        document.getElementById("scrollableDiv").scrollLeft -= 50; // Adjust scroll amount as needed
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

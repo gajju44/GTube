@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <body>
+    <button id="svgButton">
+      <svg xmlns="http://www.w3.org/2000/svg"><g><path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z" fill="white"></path></g></svg>
+    </button>
+  <script>
+    document.getElementById("svgButton").addEventListener("click", function() {
+  // Change the color of the SVG when the button is clicked
+  var svgPath = document.querySelector("#svgButton svg path");
+  svgPath.style.fill = "white";
+});
+
+  </script>
+</body>
+</html>
+<style>
+#svgButton{
+  background-color: black;
+}
+.whiteFill path {
+  fill: white;
+}</style>
+

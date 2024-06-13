@@ -1,0 +1,64 @@
+<div class="video-container">
+    <video id="video" src="chota.mp4" controls></video>
+    <div class="progress-container">
+        <div id="progress-bar"></div>
+        <div id="progress-circle"></div>
+    </div>
+</div>
+
+<script>const video = document.getElementById('video');
+    const progressBar = document.getElementById('progress-bar');
+    const progressCircle = document.getElementById('progress-circle');
+    
+    video.addEventListener('timeupdate', () => {
+        const percentage = (video.currentTime / video.duration) * 100;
+        progressBar.style.width = `${percentage}%`;
+        progressCircle.style.left = `calc(${percentage}% - 7.5px)`; // Adjust to center the circle
+    });
+    
+    // Optional: Handle seek by clicking on the progress bar
+    document.querySelector('.progress-container').addEventListener('click', (e) => {
+        const progressContainerWidth = e.currentTarget.offsetWidth;
+        const clickX = e.offsetX;
+        const newTime = (clickX / progressContainerWidth) * video.duration;
+        video.currentTime = newTime;
+    });
+    </script>
+
+<style>.video-container {
+    position: relative;
+    width: 600px;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    margin-top: 10px;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background: #007bff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#progress-circle {
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+</style>
