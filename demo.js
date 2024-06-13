@@ -1,6 +1,43 @@
 
+ // loading visibility
+ document.addEventListener('DOMContentLoaded', function() {
+ var boxDiv = document.querySelectorAll('.box');
+
+ boxDiv.forEach(function(box) {
+
+    var video = box.querySelector('.vid');
+    var image=box.querySelector('.thumbnail');
+    var vid1Div=box.querySelector('.vid1');
+    var loadingDiv =box.querySelector('.cards');
+    var detailsDiv=box.querySelector('.details');
+    var metadataDiv=box.querySelector('.metadata');
+    var imageLoadingDiv=box.querySelector('#viderror');
+    var titleprof=box.querySelector('title-prof loading');
+    var description=box.querySelector('card_description loading');
+
+    var backgroundImage = image.style.backgroundImage;
+    var url=backgroundImage.split('"')[1];
+    var img = new Image();
+   img.src = url;
+   
+    
+   img.onload = function() {
+        loadingDiv.style.display='none';
+ vid1Div.style.display='';
+ detailsDiv.style.display='';
+ metadataDiv.style.display='';
+    };
+
+
+});
+
+
+
+ });
+
 // autoplay video on hover
 document.addEventListener('DOMContentLoaded', function() {
+
     // Select all .vid1 elements
     var vid1Divs = document.querySelectorAll('.vid1');
 
@@ -15,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var progressCircle = vid1Div.querySelector('#progress-circle');
     var clickArea = vid1Div.querySelector('#tap-area');
 
+    video.addEventListener('loadeddata',function(){
+  
+ 
+    
         // Mouseover event to play video and show the correct button
         vid1Div.addEventListener('mouseover', function() {
            progressBar.style.display='';
@@ -73,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
         });
+    });
 
         // Mouseout event to pause video and hide buttons
         vid1Div.addEventListener('mouseout', function() {
