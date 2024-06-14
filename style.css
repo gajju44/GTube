@@ -751,16 +751,27 @@ margin-bottom: 40px;
 
 .content-container >.vid-container>.box>.vid1{
     position: relative;
+        height: 70%;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 300ms
   }
   
+  .content-container >.vid-container>.box>.vid1:hover{
+    border-radius: 0px;
+   
+      }
+
   .content-container >.vid-container>.box>.vid1>.vid{
   
   width: 100%;
-  border-radius: 6px;
+  border-radius: none;
   border: none;
   order:1;
+  
   }
   
+ 
   
   .content-container >.vid-container>.box>.vid1>.mute-unmute{
     position: absolute;
@@ -820,6 +831,7 @@ order: 3;
     height: 100%; 
     background-size: cover;
     background-image: url('images/mv.jpg');
+   
   }
 
 
@@ -830,6 +842,18 @@ order: 3;
     background-color: #fdfdfd00;
     position: absolute;
     z-index: 0;
+}
+
+#overlay {
+    position: absolute;
+    top: 93%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+    padding: 2px;
+ 
+    text-align: center;
 }
 
 #progress-circle{
@@ -854,7 +878,7 @@ order: 3;
 }
 
 #progress-indicator {
-    height: 101%;
+    height: 100%;
     width: 0;
     background-color: #53fd10;
     transition: width 0.1s linear;

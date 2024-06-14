@@ -11,9 +11,7 @@
     var loadingDiv =box.querySelector('.cards');
     var detailsDiv=box.querySelector('.details');
     var metadataDiv=box.querySelector('.metadata');
-    var imageLoadingDiv=box.querySelector('#viderror');
-    var titleprof=box.querySelector('title-prof loading');
-    var description=box.querySelector('card_description loading');
+    var overlay = box.querySelector('#overlay');
 
     var backgroundImage = image.style.backgroundImage;
     var url=backgroundImage.split('"')[1];
@@ -26,14 +24,42 @@
  vid1Div.style.display='';
  detailsDiv.style.display='';
  metadataDiv.style.display='';
+
+//video duration show
+
+video.addEventListener('loadeddata', function() {
+    overlay.style.display = 'block';
+    const totalDuration = video.duration;
+    const formattedDuration = formatTime(totalDuration);
+    overlay.innerHTML = `${formattedDuration}`;
+   
+});
+
+video.addEventListener('timeupdate', function() {
+    const remainingTime = video.duration - video.currentTime;
+    const formattedRemainingTime = formatTime(remainingTime);
+    overlay.innerHTML = `${formattedRemainingTime}`;
+});
+
+function formatTime(seconds) {
+  const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds %3600 )/ 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${hours<1? `${minutes}:${remainingSeconds < 10? '0' + remainingSeconds : remainingSeconds}` : `${hours}:${minutes}:${remainingSeconds}`}`;
+}
+
+
     };
 
 
 });
 
 
-
  });
+
+
+
+
 
 // autoplay video on hover
 document.addEventListener('DOMContentLoaded', function() {
@@ -52,9 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var progressCircle = vid1Div.querySelector('#progress-circle');
     var clickArea = vid1Div.querySelector('#tap-area');
 
+    //if video is loaded then only do the hover to play
     video.addEventListener('loadeddata',function(){
-  
- 
     
         // Mouseover event to play video and show the correct button
         vid1Div.addEventListener('mouseover', function() {
