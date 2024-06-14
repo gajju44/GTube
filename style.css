@@ -37,7 +37,7 @@ justify-content: space-between;
 align-items: center;
 position: fixed;
 margin: -7px;
-
+z-index: 9999;
 }
 
 /*==============================container to contain header items===========================*/
@@ -256,15 +256,15 @@ background-color: transparent;
 
 .center >.btn-search:hover::after{/* tooltip edit */
 content: attr(btn-title);
-background-color:  #4b4b4be3;
+background-color:  #4b4b4be8;
 color: var(--main-text);
-position: fixed;
+position:fixed;
 border-radius: 4px; 
 top: 9%;
-left: 66%;
+left: 70%;
 padding: 8px;
 transform: translateX(-50%);
-z-index: 1000;
+z-index: 9999;
 font-size: 12px;
 line-height: 20px;
 
@@ -301,13 +301,13 @@ background-color: var(--actived);
 
 .center >.mike-btn:hover::after{
 content: attr(btn-title);
-background-color:  #4b4b4be3;
+background-color:  #4b4b4be8;
 color: var(--main-text);
 
 position: fixed;
 border-radius: 4px; 
 top: 9%;
-left: 71%;
+left: 75%;
 padding: 8px;
 transform: translateX(-50%);
 z-index: 1;
@@ -351,13 +351,13 @@ background-color: var(--actived);
 
 .end >.upload-btn:hover::after{
 content: attr(btn-title);
-background-color:  #4b4b4be3;
+background-color:  #4b4b4be8;
 color: var(--main-text);
 display: block;
 position: fixed;
 border-radius: 4px; 
 top: 9%;
-left: 89.8%;
+left: 87.5%;
 padding: 8px;
 transform: translateX(-50%);
 z-index: 1000;
@@ -395,13 +395,13 @@ background-color: var(--actived);
 
 .end >.notification-btn:hover::after{
 content: attr(btn-title);
-background-color:  #4b4b4be3;
+background-color:  #4b4b4be8;
 color: var(--main-text);
 
 position: fixed;
 border-radius: 4px; 
 top: 9%;
-left: 93%;
+left: 91%;
 padding: 8px;
 transform: translateX(-50%);
 z-index: 1000;
@@ -632,7 +632,7 @@ flex-direction: row;
 
 .nav{
 
-width:1625px;
+width:100%;
 height: 60px;
 position: fixed;
 background-color: black;
@@ -642,6 +642,7 @@ display: flex;
 align-items: center;
 flex-direction: row;
 justify-content: center;
+z-index: 1;
 }
 .nav>.scroll-bar{
 height: 60px;
@@ -650,7 +651,7 @@ display: inline-flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-/* z-index: 1; */
+z-index: 1;
 overflow-x: hidden;
 -ms-overflow-style: none;    /*for internet explorer*/
 scrollbar-width: none;
@@ -959,19 +960,19 @@ order: 3;
 
 
 
-.navbar.expanded ~ .content-container
-.navbar.expanded ~ .content-container >.vid-container
+.navbar.expanded ~ .content-container,
+
 .navbar.expanded ~ .nav
 {
 left: 240px; 
-width: calc(100% - 240px);
-
+width: calc(100% - 227px);
+transition: left 150ms ease-in-out;
 }
 
 .navbar.expanded ~ .content-container >.vid-container>.box
 {
-    width: 357.98px;
-    height: 323.36px;
+    width: 345.98px;
+    height: 293.36px;
 }
 .navbar.expanded ~.nav>.scroll-btn-left{
 left:8px;

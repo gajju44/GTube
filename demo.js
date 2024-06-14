@@ -273,12 +273,7 @@ updateScrollButtonVisibility();
 
 var width;
     function changeStructure() {
-      document.addEventListener('DOMContentLoaded', function() {
-            var nav = document.querySelector('.nav');
-            if (width === undefined) {
       
-                width = nav.clientWidth;
-            }});
         var navbar = document.querySelector('.navbar');
             navbar.classList.toggle('expanded');
           
@@ -290,19 +285,11 @@ var width;
             if (navbar.classList.contains('expanded')) {
         lastButton.style.display = 'none';
         additionalContainer.style.display = '';
-        
-        document.addEventListener('DOMContentLoaded', function() {
-        nav.style.left = '240px';
-       
-        nav.style.width = 'calc(' + width + 'px - 160px)';});
-        container.style.left = '240px';
+
     } else {
         additionalContainer.style.display = 'none';
         lastButton.style.display = '';
-        document.addEventListener('DOMContentLoaded', function() {
-        nav.style.left = '';
-       
-        nav.style.width =width+'px';}); container.style.left = '';
+        
     }
     
    
