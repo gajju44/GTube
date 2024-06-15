@@ -437,6 +437,7 @@ border-radius: 24px;
     /* width: 72px; */
     padding: 0 4px;
     position: fixed;
+    height: 100%;
     left: 0;
     /* Align to left */
     top: 56px;
@@ -746,7 +747,7 @@ width:391.31px;
 height: 320.11px;
 display:flex;
 flex-direction: column;
-
+transition: left 300ms ease-in-out;
 margin-bottom: 40px;
 }
 
@@ -755,7 +756,7 @@ margin-bottom: 40px;
         height: 70%;
         border-radius: 8px;
         overflow: hidden;
-        transition: 300ms
+        transition: 300ms;
   }
   
   .content-container >.vid-container>.box>.vid1:hover{
@@ -768,7 +769,6 @@ margin-bottom: 40px;
   width: 100%;
   border-radius: none;
   border: none;
-  order:1;
   
   }
   
@@ -958,6 +958,227 @@ order: 3;
 }
 
 
+/* ====================================video_page specific elements============================*/
+
+
+.cont-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: transparent;
+    display: flex;
+    top: 118px;
+    left: 80px;
+    flex-direction: row;
+}
+
+.cont-container>.selected-vid{
+    width: 55%;
+    height: 86%;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    top: 79px;
+}
+
+.cont-container>.selected-vid>.vid-box{
+    position: relative;
+    width: 100%;
+    height: 73%;
+    transition: 300ms;
+    order: 1;
+}
+
+.cont-container>.selected-vid>.vid-box>.vid{
+
+    width: 100%;
+    height: 100%;
+    order:1;
+}
+
+.cont-container>.selected-vid>.details
+{
+left: 0;
+padding-bottom: 5px;
+display: flex;
+align-items: center;
+inline-size: 300px;
+order: 2;
+
+}
+.cont-container>.selected-vid>.details>.vidtitle{
+    width: 608px;
+    white-space: nowrap;
+    margin: 10px 10px 7px
+}
+
+.cont-container>.selected-vid>.metadata>.firstcontainerformeta>.accprof{
+    width: 32px;
+    height: 32px;
+    margin: 0px 8px;
+    border: 0px;
+    border-radius: 24px;
+    }
+
+
+    .cont-container>.selected-vid>.metadata
+{
+    width: 87%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    order: 3;
+    align-items: center;
+    margin-top: 3px;
+    white-space:nowrap;
+   
+    gap:50px;
+}
+
+
+.cont-container>.selected-vid>.metadata>.firstcontainerformeta>.join-sub>.sub-btn{
+    width: 96px;
+    height: 35px;
+    display: flex;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 80px;
+    color: #0f0f0f;
+   font-weight: 600;
+   font-size: small;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.cont-container>.selected-vid>.metadata>.firstcontainerformeta>.join-sub>.join-btn{
+    width: 58px;
+    height: 35px;
+    border: none;
+    display: flex;
+    background-color: #2e2c2c;
+    border-radius: 67px;
+    color: #eeeded;
+    font-weight: 600;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 12px;
+align-items: center;
+justify-content: center;
+}
+
+
+.cont-container>.selected-vid>.metadata>.other-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+}
+
+
+
+.cont-container>.selected-vid>.metadata>.other-btns>.like-dislike{
+    width: 132px;
+    height: 35px;
+    border: none;
+    display: flex;
+    background-color: #272727;
+    border-radius: 67px;
+    color: #d1cece;
+    font-weight: 600;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 12px;
+align-items: center;
+justify-content: center;
+}
+
+
+.cont-container>.selected-vid>.metadata>.other-btns >.like-dislike>.like-btn{
+    width: 79.88px;
+    height: 35px;
+    border:none ;
+    border-right: 1px solid;
+    border-color: #b4b1b18f;
+    display: flex;
+    position: relative;
+    border-radius: 67px 0px 0px 67px;
+    color: #fffbfb;
+    background-color: #272727;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+align-items: center;
+justify-content: center;
+}
+
+.cont-container>.selected-vid>.metadata>.other-btns>.like-dislike>.dislike-btn{
+    width: 52px;
+    height: 35px;
+    border:none ;
+    border-color: #b4b1b18f;
+    display: flex;
+   
+    position: relative;
+    border-radius: 0px 67px 67px 0px;
+    color: #d1cece;
+    background-color: #272727;
+    font-weight: 600;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+align-items: center;
+justify-content: center;
+}
+
+
+.cont-container>.selected-vid>.metadata>.other-btns>.share-btn{
+    width: 86.11px;
+    height: 35px;
+    border:none ;
+    border-color: #b4b1b18f;
+    display: flex;
+   
+    position: relative;
+    border-radius: 67px;
+    color: #f1f0f0;
+    background-color: #272727;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+align-items: center;
+
+}
+
+.cont-container>.selected-vid>.metadata>.other-btns>.save-btn{
+    width: 80.11px;
+    height: 35px;
+    border:none ;
+    border-color: #b4b1b18f;
+    display: flex;
+   
+    position: relative;
+    border-radius: 67px;
+    color: #f1f0f0;
+    background-color: #272727;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+align-items: center;
+
+}
+
+.cont-container>.selected-vid>.metadata>.other-btns>button:hover,
+.cont-container>.selected-vid>.metadata>.other-btns>.like-dislike>button:hover,
+.cont-container>.selected-vid>.metadata>.firstcontainerformeta>.join-sub>.join-btn:hover
+{
+    background-color: #83828269;
+}
+
+.cont-container>.selected-vid>.metadata>.firstcontainerformeta>.join-sub>.sub-btn:hover{
+    background-color:#c9c8c8 ;
+}
 
 
 .navbar.expanded ~ .content-container,
