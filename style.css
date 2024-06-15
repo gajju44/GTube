@@ -769,6 +769,7 @@ margin-bottom: 40px;
   width: 100%;
   border-radius: none;
   border: none;
+  position: relative;
   
   }
   
@@ -967,9 +968,10 @@ order: 3;
     position: fixed;
     background-color: transparent;
     display: flex;
-    top: 118px;
-    left: 80px;
+    top: 68px;
+    left: 30px;
     flex-direction: row;
+    overflow: auto;
 }
 
 .cont-container>.selected-vid{
@@ -994,6 +996,7 @@ order: 3;
     width: 100%;
     height: 100%;
     order:1;
+    position: relative;
 }
 
 .cont-container>.selected-vid>.details
@@ -1179,6 +1182,146 @@ align-items: center;
 .cont-container>.selected-vid>.metadata>.firstcontainerformeta>.join-sub>.sub-btn:hover{
     background-color:#c9c8c8 ;
 }
+
+
+
+
+.cont-container>.recomended-vids{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+gap: 15px;
+}
+
+.cont-container>.recomended-vids>.box{
+    width:90%;
+    height: 98px;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+
+.cont-container>.recomended-vids>.box>.vid1{
+    position: relative;
+    height: 100%;
+    width: 200px;;
+    /* overflow: hidden; */
+}
+
+
+.cont-container>.recomended-vids>.box>.vid1>.vid{
+    width: 100%;
+    height: 100%;
+    border-radius: none;
+    border: none;
+   background-color: black;
+}
+
+
+.cont-container>.recomended-vids>.box>.vid1>.mute-unmute{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    top: -4px;
+    left: 171px;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+
+}
+
+
+    .cont-container>.recomended-vids>.box>.data>.details
+{
+left: 0;
+padding-top: 4px;
+display: flex;
+align-items: center;
+inline-size: 300px;
+
+
+}
+
+.cont-container>.recomended-vids>.box>.data>.metadata
+{
+    width: 100%;
+position:relative;
+padding-top: 4px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+
+.cont-container>.recomended-vids>.box>.vid1>.thumbnail {
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    background-size: cover;
+    z-index: 9998;
+  }
+
+
+  #tap-area{
+    height: 20px;
+    width: 100%;
+    bottom: -7px;
+    background-color: #fdfdfd00;
+    position: absolute;
+    z-index: 0;
+}
+
+#overlay {
+    position: absolute;
+    top: 87.5%;
+    left: 91%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+    padding: 2px;
+ z-index: 9999;
+    text-align: center;
+}
+
+#progress-circle{
+    height: 9px;
+    width: 9px;
+    background-color: #53fd10;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    border-radius: 50%;
+    position: absolute;
+}
+
+#custom-progress-bar {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #b9b9b96e;
+   
+    top: 95px;
+    align-items: center;
+    display: flex;
+}
+
+#progress-indicator {
+    height: 100%;
+    width: 0;
+    background-color: #53fd10;
+    transition: width 0.1s linear;
+    
+}
+
+
+
+
+
 
 
 .navbar.expanded ~ .content-container,
