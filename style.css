@@ -20,16 +20,12 @@ body{
 overflow-y: hidden;
 }
 
-.all{
-width: 100%;
-height: 100%;
-overflow: auto;
-}
+
 /*================================= header =================================== */
 
 .header {
 background-color: inherit;
-width: 100%;
+width: 98.8%;
 height: 56px;
 display: flex;
 flex-direction: row;
@@ -37,7 +33,9 @@ justify-content: space-between;
 align-items: center;
 position: fixed;
 margin: -7px;
-z-index: 9999;
+z-index: 9997;
+top:0;
+padding-top: 3px;
 }
 
 /*==============================container to contain header items===========================*/
@@ -446,7 +444,7 @@ border-radius: 24px;
     flex-direction: column;
     justify-content: space-between;
     border: none;
-    z-index: 1;
+    z-index: 9999;
     align-items: center;
 }
 
@@ -619,26 +617,16 @@ font-weight: 500;
 }
 
 
-.content-container{
-width: 100%;
-height: 100%;
-position: fixed;
-background-color: transparent;
-display: flex;
-top: 118px;
-left: 80px;
-flex-direction: row;
 
-}
 
 .nav{
 
 width:100%;
 height: 60px;
 position: fixed;
-background-color: black;
-top: 58px;
-left: 80px;
+background-color: var(--main-color);
+top: 52.4px;
+left: 54px;
 display: flex;
 align-items: center;
 flex-direction: row;
@@ -646,17 +634,20 @@ justify-content: center;
 z-index: 1;
 }
 .nav>.scroll-bar{
-height: 60px;
-width: auto;
-display: inline-flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-z-index: 1;
-overflow-x: hidden;
--ms-overflow-style: none;    /*for internet explorer*/
-scrollbar-width: none;
-scroll-behavior: smooth;
+    height: 60px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    left: -9px;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    background-color: transparent;
 }
 
 
@@ -665,6 +656,8 @@ padding: 0 24px;
 display: flex;
 flex: 1;
 flex-direction: row;
+position: relative;
+left: 21px;
 }
 .nav>.scroll-bar>.btncontainer>.catagory-btn{
 text-align: center;
@@ -690,6 +683,7 @@ height: 40px;
 border: none;
 display: flex;
 align-items: center;
+justify-content: center;
 padding: 2px;
 }
 
@@ -716,20 +710,38 @@ z-index: 1000000;
 position: absolute;
 align-items: center;
 justify-content: flex-end;
-right: 0;
 background:linear-gradient(to left,#0f0f0f 35%,#21212100 65%);
+margin-right: 9px;
+right: 26px;
 } 
+
 .nav>.scroll-btn-left{
 display: flex;
 width: 106px;
 height: 100%;
-left: 0;
+left: 21px;
 z-index: 1000000;
 justify-content: flex-start;
 position: absolute;
 align-items: center;
 background: linear-gradient(to right,#0f0f0f 35%,#21212100 65%);
 }
+
+
+.content-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: transparent;
+    display: flex;
+    left: 69px;
+    flex-direction: row;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    will-change: transform;
+}
+
 
 .content-container >.vid-container{
 display: flex;
@@ -738,12 +750,14 @@ flex-wrap: wrap;
 margin: 0 16px;
 flex-direction: row;
 gap: 20px;
+ top: 118px;
+ left: 15px;
+position: absolute;
 
-overflow: auto;
 }
 
 .content-container >.vid-container>.box{
-width:391.31px;
+width:398.31px;
 height: 320.11px;
 display:flex;
 flex-direction: column;
@@ -755,7 +769,6 @@ margin-bottom: 40px;
     position: relative;
         height: 70%;
         border-radius: 8px;
-        overflow: hidden;
         transition: 300ms;
   }
   
@@ -767,9 +780,10 @@ margin-bottom: 40px;
   .content-container >.vid-container>.box>.vid1>.vid{
   
   width: 100%;
+  height: 100%;
   border-radius: none;
   border: none;
-  position: relative;
+  /* position: relative; */
   
   }
   
@@ -874,7 +888,7 @@ order: 3;
     height: 3px;
     background-color: #b9b9b96e;
    
-    top: 218px;
+    bottom:0.5px;
     align-items: center;
     display: flex;
 }
@@ -963,15 +977,16 @@ order: 3;
 
 
 .cont-container{
-    width: 98.5%;
+    width: 100%;
     height: 100%;
     position: fixed;
     background-color: transparent;
     display: flex;
-    top: 68px;
-    left: 16px;
+    top: 0;
+    left: 0;
     flex-direction: row;
     overflow: auto;
+    will-change: transform;
 }
 
 .cont-container>.selected-vid{
@@ -981,6 +996,7 @@ order: 3;
     display: flex;
     flex-direction: column;
     top: 79px;
+    position: relative;
 }
 
 .cont-container>.selected-vid>.vid-box{
@@ -1197,8 +1213,10 @@ align-items: center;
     height: 100%;
     display: flex;
     flex-direction: column;
- align-items: center;
-gap: 15px;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    top: 79px;
 }
 
 .cont-container>.recomended-vids>.box{
@@ -1489,20 +1507,26 @@ gap: 5px;
 
 
 
-.navbar.expanded ~ .content-container,
-
-.navbar.expanded ~ .nav
+.navbar.expanded ~ .content-container
 {
 left: 240px; 
-width: calc(100% - 227px);
+width: calc(100% - 240px);
 transition: left 150ms ease-in-out;
 }
 
+.navbar.expanded ~ .nav
+{
+    left: 240px; 
+    width: calc(100% - 257px);
+    transition:  150ms ease-in-out;
+    }
+
 .navbar.expanded ~ .content-container >.vid-container>.box
 {
-    width: 345.98px;
+    width: 340.98px;
     height: 293.36px;
 }
+
 .navbar.expanded ~.nav>.scroll-btn-left{
 left:8px;
 }
@@ -1546,7 +1570,7 @@ width: 95%;
 
 width: 95%;
 }
-.nav>.scroll-btn-righ{
+.nav>.scroll-btn-right{
 right:0;
 }
 
@@ -1617,7 +1641,9 @@ right:0;
 
 }
 
-
+body, html {
+    scroll-behavior: smooth;
+}
 
 
 
@@ -1628,7 +1654,8 @@ right:0;
 
 /* Customize the scrollbar */
 ::-webkit-scrollbar {
-width: 12px; /* Width of the entire scrollbar */
+width: 50px; /* Width of the entire scrollbar */
+z-index: 9999;
 }
 
 ::-webkit-scrollbar-track {
@@ -1646,7 +1673,7 @@ background: #555; /* Color when hovered */
 }
 
 ::-webkit-scrollbar-button{
-    
+    z-index: 9999;
 }
 
 /* For Firefox */
