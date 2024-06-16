@@ -963,13 +963,13 @@ order: 3;
 
 
 .cont-container{
-    width: 100%;
+    width: 98.5%;
     height: 100%;
     position: fixed;
     background-color: transparent;
     display: flex;
     top: 68px;
-    left: 30px;
+    left: 16px;
     flex-direction: row;
     overflow: auto;
 }
@@ -991,6 +991,10 @@ order: 3;
     order: 1;
 }
 
+
+
+
+
 .cont-container>.selected-vid>.vid-box>.vid{
 
     width: 100%;
@@ -1007,12 +1011,14 @@ display: flex;
 align-items: center;
 inline-size: 300px;
 order: 2;
-
+z-index: 1;
+width: 100%;
 }
 .cont-container>.selected-vid>.details>.vidtitle{
     width: 608px;
-    white-space: nowrap;
-    margin: 10px 10px 7px
+    /* white-space: nowrap; */
+    margin: 10px 10px 7px;
+    width: 100%;
 }
 
 .cont-container>.selected-vid>.metadata>.firstcontainerformeta>.accprof{
@@ -1026,7 +1032,7 @@ order: 2;
 
     .cont-container>.selected-vid>.metadata
 {
-    width: 87%;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -1268,7 +1274,7 @@ gap: 5px;
   }
 
 
-  #tap-area{
+  .cont-container>.recomended-vids>.box>.vid1>#tap-area{
     height: 20px;
     width: 100%;
     bottom: -7px;
@@ -1277,7 +1283,7 @@ gap: 5px;
     z-index: 0;
 }
 
-#overlay {
+.cont-container>.recomended-vids>.box>.vid1>#overlay {
     position: absolute;
     top: 87.5%;
     left: 91%;
@@ -1289,7 +1295,7 @@ gap: 5px;
     text-align: center;
 }
 
-#progress-circle{
+.cont-container>.recomended-vids>.box>.vid1>#progress-circle{
     height: 9px;
     width: 9px;
     background-color: #53fd10;
@@ -1299,7 +1305,7 @@ gap: 5px;
     position: absolute;
 }
 
-#custom-progress-bar {
+.cont-container>.recomended-vids>.box>.vid1>#custom-progress-bar {
     position: absolute;
     width: 100%;
     height: 3px;
@@ -1310,13 +1316,172 @@ gap: 5px;
     display: flex;
 }
 
-#progress-indicator {
+.cont-container>.recomended-vids>.box>.vid1>#progress-indicator {
     height: 100%;
     width: 0;
     background-color: #53fd10;
     transition: width 0.1s linear;
     
 }
+
+
+
+
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.mute-unmute{
+   
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    
+    align-items: center;
+    display: flex;
+   order:3;
+
+}
+
+
+
+
+.cont-container>.selected-vid>.vid-box>#tap-area1{
+    height: 20px;
+    width: 100%;
+    bottom: 34px;
+    background-color: #fdfdfd00;
+    position: absolute;
+    z-index: 0;
+}
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.video-time{
+    width: auto;
+    height: 36px;
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.video-time>#overlay1
+{ 
+    border: none;
+    background-color:transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 100ms;
+    order: 1;
+}
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.video-time>#overlay2 {
+   
+    border: none;
+    background-color:transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 100ms;
+    order: 3;
+}
+
+.cont-container>.selected-vid>.vid-box>#custom-progress-bar1>#progress-circle1{
+    height: 9px;
+    width: 9px;
+    background-color: #53fd10;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    border-radius: 50%;
+    position: absolute;
+ 
+}
+
+.cont-container>.selected-vid>.vid-box>#custom-progress-bar1 {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #b9b9b96e;
+   transition: 1s ease-in-out;
+  
+    align-items: center;
+    display: flex;
+    
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and transform */
+}
+
+.cont-container>.selected-vid>.vid-box>#custom-progress-bar1>#progress-indicator1 {
+    height: 100%;
+    width: 0;
+    background-color: #53fd10;
+    transition: width 0.1s linear;
+    
+    position: relative;
+}
+
+
+.cont-container>.selected-vid>.vid-box>.video-controls{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    gap: 2px;
+    transition: 200ms ease-in-out;/* Smooth transition for opacity and transform */
+}
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.play-pause-btn{
+ 
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f0f0f00;
+    order: 1;
+}
+/* .cont-container>.selected-vid>.vid-box>.video-controls>.play-pause-btn:hover{
+    background-color: #1d1d1d96;
+} */
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.play-pause-btn>.play-btn,
+.cont-container>.selected-vid>.vid-box>.video-controls>.play-pause-btn>.pause-btn
+{
+    
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color:transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}
+
+
+.cont-container>.selected-vid>.vid-box>.video-controls>.next-btn{
+    
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color:transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    order: 2;
+    
+}
+
+
+
 
 
 
@@ -1479,3 +1644,13 @@ background-color: #888; /* Color of the scroll thumb */
 ::-webkit-scrollbar-thumb:hover {
 background: #555; /* Color when hovered */
 }
+
+::-webkit-scrollbar-button{
+    
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: 12px;
+    scrollbar-color: #888 transparent; /* Thumb and track color */
+  }

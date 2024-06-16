@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             unmuteButton.style.display = ''; // Show unmute button
         } else {
             video.muted = true; // Mute the video
-            muteButton.style.display = 'inline-block'; // Show mute button
+            muteButton.style.display = ''; // Show mute button
             unmuteButton.style.display = 'none'; // Hide unmute button
         }
     }

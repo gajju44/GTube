@@ -197,20 +197,72 @@
 
 <div class="selected-vid">
     <div class="vid-box">
-    <video controls="" style="background-color: black;" class="vid"  controlslist="nodownload" poster="images/mv.jpg"   alt="" > 
-        <source src="c.mp4"  type="video/mp4">
+        
+    <video autoplay="" muted controlslist="nodownload" style="background-color: black;"  class="vid"  poster="images/mv.jpg"   alt="" > 
+        <source src="c1.mp4"  type="video/mp4">
         Sorry, your browser doesn't support embedded videos. 
 
     </video>
+
+    <div class="video-controls" style=" bottom: 3px;">
+
+    <div class="play-pause-btn">
+        <button title="play/pause" class="play-btn" onclick="videoplaytoggle()"><svg xmlns="http://www.w3.org/2000/svg" style="background-color: transparent;" width="24px" height="24px" viewBox="0 0 24 24" fill="white" class="size-6">
+            <path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z" clip-rule="evenodd" />
+          </svg>
+          </button>
+        <button title="play/pause" style="display: none;"  class="pause-btn" onclick="videoplaytoggle()"><svg xmlns="http://www.w3.org/2000/svg" style="background-color: transparent;" width="24px" height="24px" viewBox="0 0 24 24" fill="white" class="size-6">
+            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+          </svg>
+          </button>
+    </div>
+
+    <button title="next video" class="next-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="white" style="background-color: transparent;" class="size-6">
+        <path d="M5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256l-7.108-4.061C13.555 6.346 12 7.249 12 8.689v2.34L5.055 7.061Z" />
+      </svg>
+      
+      </button>
+
+   
+      <button class="mute-unmute" onclick="toggleMute()" id="mute" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" style="background-color: transparent;"  width="20px" stroke="currentColor" height="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
+            <path  d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+          </svg>
+                         
+    </button>
+    <button class="mute-unmute" onclick="toggleMute()" id="unmute" >
+        <svg xmlns="http://www.w3.org/2000/svg" style="background-color: transparent;" width="20px" stroke="currentColor" height="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
+        <path  d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+      </svg>
+      </button>
+
+
+<div class="video-time">
+    <span id="overlay1">0:00</span>
+    <span style="order: 2; background-color: transparent;">/</span>
+    <span id="overlay2">0:00</span>
 </div>
-<div class="details" onclick="location.href='youtube.html';" ">
+    
+
+</div>
+
+<div id="tap-area1" style="display: none;"></div>
+<div id="custom-progress-bar1" style=" bottom: -22px;  width: 98%; left: 6px;">
+    <div id="progress-indicator1"></div>
+    <div id="progress-circle1" ></div>
+</div>
+ </div>
+
+
+
+<div class="details" onclick="location.href='youtube.html';" >
    
 
     <a class="vidtitle" style="font-size: 19px; font-weight: bold;">How To Build a HTML page Without Coding|Part 1|</a>
 
     
 </div>
-<div class="metadata" onclick="location.href='youtube.html';" >
+<div class="metadata" onclick="location.href='youtube.html';" style="background-color: inherit;" >
     <div class="firstcontainerformeta" style="display: flex; align-items: center;">
     <img class="accprof" src="images/profile.jpg" alt="">
     <div style="display: flex; flex-direction: column;">
@@ -1066,6 +1118,68 @@
 </body>
 <script> 
 
+
+// video play pause button display
+ var box = document.querySelector('.selected-vid');
+ var progressBar = box.querySelector('#custom-progress-bar1');
+ var clickArea = box.querySelector('#tap-area1');
+var video = box.querySelector('.vid');
+var vidbox =box.querySelector('.vid-box');
+var vidControls=box.querySelector('.video-controls')
+var playBtn=box.querySelector('.play-btn');
+    var pauseBtn=box.querySelector('.pause-btn');
+
+    video.play().catch(function(error) {
+  // Autoplay was likely blocked, so show the play button
+  pauseBtn.style.display = '';
+  playBtn.style.display = 'none';
+});
+
+video.addEventListener('playing', function() {
+  // Hide the pause button and show the play button when the video starts playing
+  pauseBtn.style.display = 'none';
+  playBtn.style.display = '';
+  vidbox.addEventListener('mouseout',function(){
+    vidControls.style.bottom='3px';
+    progressBar.style.bottom='-22px';
+    clickArea.style.display='none';
+});
+
+});
+
+video.addEventListener('pause', function() {
+  // Show the pause button and hide the play button when the video is paused
+  pauseBtn.style.display = '';
+  playBtn.style.display = 'none';
+  vidControls.style.bottom='45px';
+    progressBar.style.bottom='45px';
+    clickArea.style.display='';
+    vidbox.addEventListener('mouseout',function(){
+        vidControls.style.bottom='45px';
+    progressBar.style.bottom='45px';
+    clickArea.style.display='';
+});
+});
+
+
+vidbox.addEventListener('mouseover',function(){
+    // vidControls.style.display='';
+    // progressBar.style.display='';
+    clickArea.style.display='';
+
+    vidControls.style.bottom='45px';
+    progressBar.style.bottom='45px';
+});
+
+
+
+
+
+
+
+
+
+// navbar display
     var changebtn = document.querySelector('.nav-btn');
     changebtn.addEventListener('click', function() {
     var navbar = document.querySelector('.navbar');
@@ -1076,6 +1190,179 @@
             navbar.style.display='none'; 
         }
     });
+
+   function videoplaytoggle(){
+    var box = document.querySelector('.selected-vid');
+    var video=box.querySelector('.vid');
+    var playBtn=box.querySelector('.play-btn');
+    var pauseBtn=box.querySelector('.pause-btn');
+    // var playbtn=querySelector
+
+    if(!video.paused){
+        video.pause();
+        playBtn.style.display="none";
+        pauseBtn.style.display="";
+    }
+    else {
+        video.play();
+        pauseBtn.style.display="none";
+        playBtn.style.display="";
+    }
+   }
+
+    
+// mute unmute toggle
+   document.addEventListener('DOMContentLoaded', function() {
+
+    var box = document.querySelector('.selected-vid');
+    var video=box.querySelector('.vid');
+    var muteButton=box.querySelector('#mute');
+    var unmuteButton=box.querySelector('#unmute');
+
+ // Click events to toggle mute/unmute state
+ muteButton.addEventListener('click', function() {
+            toggleMute(video, muteButton, unmuteButton);
+        });
+
+        unmuteButton.addEventListener('click', function() {
+            toggleMute(video, muteButton, unmuteButton);
+        });
+    
+
+    // Function to toggle mute/unmute state
+    function toggleMute(video, muteButton, unmuteButton) {
+        if (video.muted) {
+            video.muted = false; // Unmute the video
+            muteButton.style.display = 'none'; // Hide mute button
+            unmuteButton.style.display = ''; // Show unmute button
+        } else {
+            video.muted = true; // Mute the video
+            muteButton.style.display = ''; // Show mute button
+            unmuteButton.style.display = 'none'; // Hide unmute button
+        }
+    }
+});
+
+
+
+ // loading visibility
+ document.addEventListener('DOMContentLoaded', function() {
+ var box = document.querySelector('.selected-vid');
+
+
+    var video = box.querySelector('.vid');
+
+    var vid1Div=box.querySelector('.vid-box');
+    // var loadingDiv =box.querySelector('.cards');
+    var detailsDiv=box.querySelector('.details');
+    var metadataDiv=box.querySelector('.metadata');
+    var overlay = box.querySelector('#overlay2');
+    var progressBar = box.querySelector('#custom-progress-bar1');
+    var progressIndicator = box.querySelector('#progress-indicator1');
+    var progressCircle = box.querySelector('#progress-circle1');
+    var clickArea = box.querySelector('#tap-area1');
+    var timerDisplay = document.querySelector('#overlay1');
+    var muteButton=box.querySelector('#mute');
+    var unmuteButton=box.querySelector('#unmute');
+    
+
+//video duration show
+
+video.addEventListener('loadeddata', function() {
+    
+    //mute unmute button display
+    if(video.muted){
+        muteButton.style.display='';
+        unmuteButton.style.display='none';
+    }
+    else{
+        muteButton.style.display='none';
+        unmuteButton.style.display='';
+    }
+
+
+
+    overlay.style.display = 'block';
+    const totalDuration = video.duration;
+    const formattedDuration = formatTime(totalDuration);
+    overlay.innerHTML = `${formattedDuration}`;
+   
+});
+
+video.addEventListener('timeupdate', function() {
+    updateTimer();
+
+    var progress = (video.currentTime / video.duration) * 100;
+        progressBar.value = progress;
+        // For custom progress bar
+        if (progressIndicator) {
+            progressIndicator.style.width = `${progress}%`;
+           
+                progressCircle.style.left = `calc(${progress}% - 7.5px)`; 
+        }
+});
+
+function formatTime(seconds) {
+  const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds %3600 )/ 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${hours<1? `${minutes}:${remainingSeconds < 10? '0' + remainingSeconds : remainingSeconds}` : `${hours}:${minutes}:${remainingSeconds}`}`;
+}
+
+function updateTimer() {
+    var currentTime = video.currentTime;
+    var seconds = Math.floor(currentTime%60);
+    var minutes = Math.floor((currentTime %3600 )/ 60);
+    var hours =Math.floor(currentTime / 3600);
+    
+    var duration=video.duration;
+    var ishour=Math.floor(duration /3600);
+
+    var formattedSeconds = `${seconds < 10? "0" + seconds : seconds}`;
+    var formattedHours =`${ishour > 0? hours+":" :""}`;
+    // Update the timer display
+    timerDisplay.textContent = formattedHours+`${minutes}:` + formattedSeconds;
+  }
+
+
+
+ // For custom progress bar
+ if (progressIndicator) {
+        progressBar.addEventListener('click', (e) => {
+        const progressContainerWidth = e.currentTarget.offsetWidth;
+        const clickX = e.offsetX;
+        const newTime = (clickX / progressContainerWidth) * video.duration;
+        video.currentTime = newTime;
+    });
+   clickArea.addEventListener('click', (e) => {
+        const progressContainerWidth = e.currentTarget.offsetWidth;
+        const clickX = e.offsetX;
+        const newTime = (clickX / progressContainerWidth) * video.duration;
+        video.currentTime = newTime;
+    });
+    }
+
+    // Show the progress circle when hovering over the progress bar
+ progressBar.addEventListener('mouseover', function() {
+                progressCircle.style.opacity = '1'; // Make it visible
+            });
+           clickArea.addEventListener('mouseover', function() {
+                progressCircle.style.opacity = '1'; // Make it visible
+            });
+            clickArea.addEventListener('mouseout', function() {
+                progressCircle.style.opacity = '0'; // Make it visible
+            });
+            progressCircle.addEventListener('mouseover', function() {
+                progressCircle.style.opacity = '1'; // Make it visible
+            });
+
+
+ });
+
+
+
+
+
         </script>
 <script src="demo.js"></script>
 </html>
