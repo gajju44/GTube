@@ -130,7 +130,7 @@ justify-content: space-between;
 
 /*=========================================Search box=====================================*/
 .center>.search-div {
-width: 543px;
+width: auto;
 height:38.23px;
 background-color: var(--search-back);
 border: 0.1ch solid var(--border);
@@ -732,7 +732,7 @@ background: linear-gradient(to right,#0f0f0f 35%,#21212100 65%);
 
 .content-container{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: fixed;
     background-color: transparent;
     display: flex;
@@ -799,7 +799,7 @@ margin-bottom: 40px;
     border: none;
     border-radius: 50%;
     top: 5px;
-    left: 355px;
+    right:3px;
     align-items: center;
     display: flex;
     z-index: 1;
@@ -1511,9 +1511,9 @@ gap: 5px;
     
 }
 
+.navbar > .container > #upload-btn-mobile{
 
-
-
+display: none;}
 
 
 
@@ -1573,37 +1573,144 @@ left:8px;
 
 }
 
+
+
+@media (max-width: 1440px) {
+
+    .content-container {
+    
+    width: 95.2%;
+    }
+    .nav {
+    
+    width: 95.2%;
+    }
+    .nav>.scroll-btn-right{
+    right:0;
+    }
+    
+    .content-container >.vid-container>.box {
+        width: 422.31px;
+        height: 341.11px;
+    }
+    
+
+    .navbar.expanded ~ .content-container >.vid-container>.box
+{
+    width: 367.98px;
+    height: 296.36px;
+}
+    }
+    
+
+
+
+
 @media (max-width: 1366px) {
 
 .content-container {
 
-width: 95%;
+width: 94.9%;
 }
 .nav {
 
-width: 95%;
+width: 94.9%;
 }
 .nav>.scroll-btn-right{
 right:0;
 }
 
+.content-container >.vid-container>.box {
+    width: 399.31px;
+    height: 327.11px;
+}
+.navbar.expanded ~ .content-container >.vid-container>.box
+{
+    width: 343.98px;
+    height: 278.36px;
+}
 }
 
 
-@media (max-width: 800px) {
+/* for-desktop-up */
+@media (max-width: 1280px) { 
+    .content-container {
+
+        width: 94.6%;
+        }
+        .nav {
+        
+        width: 94.6%;
+        }
+        .nav>.scroll-btn-right{
+        right:0;
+        }
+    .content-container >.vid-container>.box {
+        width: 372.31px;
+        height: 301.36px;
+    }
+
+    .navbar.expanded ~ .content-container >.vid-container>.box
+{
+    width: 315.98px;
+    height: 256.36px;
+}
+}
+
+
+
+
+/* for-tablet-landscape-up */
+@media (max-width: 900px)
+{
+    
+    
+
+}
+
+@media (max-width: 810px) {
+
+.header{
+    width: 98.1%;
+}
+
+    .start>.icon {
+        padding: 15px 16px 18px 15.2px;
+        }
+        
+        .search-form{
+            width: auto;
+            }
+
     .content-container {
         left: 73px;
         width: 91%;
     }
     .nav {
        
-        width: 91%;
+        width: 91.6%;
     }
+    
     .content-container >.vid-container>.box
 {
-    width: 326.98px;
-    height: 293.36px;
+  width: 330.98px;
+    height: 270.36px;
 }
+
+.navbar.expanded ~ .content-container >.vid-container>.box
+{
+    width: 93%;
+    height: 91%;
+}
+
+
+.navbar.expanded ~ .nav
+{
+   
+    width: calc(91.6% - 257px);
+   
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1624,8 +1731,22 @@ right:0;
 
 }
 
+
+/* for-tablet-portrait-up */
+@media (max-width: 600px) { }
+
+
+
+/* for-phone-only */
+@media (max-width: 599px) { }
+
+
+
+
 @media (max-width:450px){
 
+
+    
 
     .content-container {
        
@@ -1640,23 +1761,89 @@ right:0;
     }
     }
 
-@media (max-width:400px){
+    @media (max-width:400px){
 
 
-.content-container {
-   
-    width: 84%;
-}
-.nav {
-   
-    width: 84%;
-}
+         .navbar {
+            top: auto;
+        height: auto;
+        padding: 0 4px;
+      
+        width: 100%;
+        left: 0;
+        bottom: 0; /* Align to bottom */
+        /* Align to left */
+    }
 
-}
+   .navbar>.container {
+    flex-direction: row;
+    padding: 7px 0 7px;
+    width: auto;
+    height: 46px;
+    gap: 34px;
+      
+    }
+
+    .navbar > .container >.btn {
+        padding: 3px 0 3px;
+        /* width: 67px; */
+        height: 48px;
+       
+    }
+
+
+    .navbar > .container > #upload-btn-mobile{
+        display: block;
+
+    }
+
+
+   .container >.btn {
+        padding: 7px 0 7px;
+        width: 67px;
+        height: auto;
+    }
+
+
+        .content-container {
+            left: 73px;
+            width: 80.8%;
+        }
+        .nav {
+           
+            width:84%;
+        }
+        
+        .content-container >.vid-container>.box
+    {
+       width: 265.98px;
+            height: 236.36px;
+    
+    }
+    
+    .navbar.expanded ~ .content-container >.vid-container>.box
+    {
+        width: 93%;
+        height: 91%;
+    }
+    
+    
+    .navbar.expanded ~ .nav
+    {
+       
+        width: calc(91.6% - 257px);
+       
+        }
+    
+    }
+
 
 body, html {
     scroll-behavior: smooth;
 }
+
+
+
 
 
 
