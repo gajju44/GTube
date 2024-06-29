@@ -1455,7 +1455,7 @@ gap: 5px;
 
 .cont-container>.selected-vid>.vid-box>.video-controls{
     width: 100%;
-    height: 45px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1467,8 +1467,8 @@ gap: 5px;
 
 .cont-container>.selected-vid>.vid-box>.video-controls>.play-pause-btn{
  
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -1485,8 +1485,8 @@ gap: 5px;
 .cont-container>.selected-vid>.vid-box>.video-controls>.play-pause-btn>.pause-btn
 {
     
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border: none;
     border-radius: 50%;
     background-color:transparent;
@@ -1499,8 +1499,8 @@ gap: 5px;
 
 .cont-container>.selected-vid>.vid-box>.video-controls>.next-btn{
     
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border: none;
     border-radius: 50%;
     background-color:transparent;
