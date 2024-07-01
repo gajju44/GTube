@@ -1,1467 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUTUBE</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Comprehensive Input Types Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-    <!-- =============================HEADER======================================== -->
-    <div class="header">
-
-        <div class="container">
-            <div class="start">
-                <!--==============nav button=================-->
-                <button onclick="changeStructure()" class="nav-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        focusable="false">
-                        <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
-                    </svg>
-                </button>
-                 <a class="icon" href="youtube.html" title="GTube Home">
-                <!--===============================Icon====================================-->
-                <svg class="ply-btn-svg" id="yt-logo-updated_yt2" width="28.57px" height="20px" viewBox="0 0 28.57 20"
-                    preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                        <path
-                            d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z"
-                            fill="#0dff00"></path>
-                        <path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"></path>
-                    </g>
-                   
-                </svg>
-                   <span class="Gtube">
-                   <b > GTube</b>
-                </span>
-            
-                 </a>
-                <a href="youtube.html" class="statecode" title="GTube Home">
-                    IN
-                </a>
-           
-            </div>
-
-            <div class="center">
-                <!--=================searchbox======================-->
-                <div class="search-div">
-                    <svg class="svgsrch" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" focusable="false" style="display:none;" ><path d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"></path></svg>
-                  <div class="search-input">
-                   
-                    <form class="search-form" action="">
-
-                        <input type="text" name="search" placeholder="Search" style="outline: none;">
-                    </form>
-
-                    <div class="remove-search-query">
-                        <button class="button-search-rmv" onclick="clearInput()" style="display: none;">
-                            <svg xmlns="http://www.w3.org/2000/svg"  height="24px" viewBox="0 0 24 24" width="24px" focusable="false"><path d="m12.71 12 8.15 8.15-.71.71L12 12.71l-8.15 8.15-.71-.71L11.29 12 3.15 3.85l.71-.71L12 11.29l8.15-8.15.71.71L12.71 12z"></path></svg>
-                        </button>
-                    </div>
-
-                </div>
-                   
-                </div>
-
-                
-                <!--==================search button======================-->
-                <button onclick="search" class="btn-search" btn-title="Search">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        focusable="false">
-                        <path
-                            d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
-                        </path>
-                    </svg>
-                </button>
-
-                <!--=================mike button======= -->
-                <button onclick="alert('bhadve haatse type kr')"  class="mike-btn" btn-title="Search with your voice">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        focusable="false">
-                        <path
-                            d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"
-                            fill="currentcolor"></path>
-                    </svg>
-
-
-                </button>
-            </div>
-
-            <div class="end">
-                <!--====================upload button=============================-->
-                <button onclick="alert('Sunday ko aa')" class="upload-btn" btn-title="Create">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        focusable="false">
-                        <path
-                            d="M14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2zm3-7H3v12h14v-6.39l4 1.83V8.56l-4 1.83V6m1-1v3.83L22 7v8l-4-1.83V19H2V5h16z">
-                        </path>
-                    </svg>
-                </button>
-                <!--=======================notification button======================-->
-                <button onclick="alert('Sunday ko aa')" class="notification-btn" btn-title="Notifications">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        focusable="false">
-                        <path
-                            d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z">
-                        </path>
-                    </svg>
-                </button>
-                <!-- ========================profile============================= -->
-                <button class="prof-btn">
-                    <img src="images/profile.jpg" alt="error">
-                </button>
-
-            </div>
-
+    <h1>Form with All Input Types</h1>
+    <form action="/submit" method="post">
+        <!-- Text Input -->
+        <div class="form-group">
+            <label for="text">Text Input</label>
+            <input type="text" id="text" name="text">
         </div>
 
-    </div>
-
-   
-<!-- =================================================navbar======================================= -->
-<div id="originalStructure" class="navbar">
-
-    <div class="container">
-
-        <button class="btn" onclick="window.location.href='youtube.html';"  title="Home">
-            <svg id="home" xmlns="http://www.w3.org/2000/svg"  height="24px" viewBox="0 0 24 24" width="24px" focusable="false"><path d="m12 4.44 7 6.09V20h-4v-6H9v6H5v-9.47l7-6.09m0-1.32-8 6.96V21h6v-6h4v6h6V10.08l-8-6.96z"></path></svg>
-            <span class="btn-text">
-                Home
-            </span>
-        </button>
-        
-        <button  class="btn" onclick=" window.location.href='shorts.html';" href="new.html" title="Shorts">
-            <svg id="shorts" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" focusable="false" ><path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z"></path></svg>
-            <span class="btn-text">
-                Shorts
-            </span>
-        </button>
-
-        <button  class="btn" onclick="window.location.href='Subscriptions.html';" title="Subscriptions">
-            <svg id="subscriptions" xmlns="http://www.w3.org/2000/svg"  height="24px" viewBox="0 0 24 24" width="24px" focusable="false"><path d="M10 18v-6l5 3-5 3zm7-15H7v1h10V3zm3 3H4v1h16V6zm2 3H2v12h20V9zM3 10h18v10H3V10z"></path></svg>
-            <span class="btn-text">
-                Subscriptions
-            </span>
-        </button>
-
-        <button id="you-btn" onclick=" window.location.href='you.html';" class="btn" title="You">
-            <svg id="you" xmlns="http://www.w3.org/2000/svg"  height="24px" viewBox="0 0 24 24" width="24px" focusable="false" ><path d="m11 7 6 3.5-6 3.5V7zm7 13H4V6H3v15h15v-1zm3-2H6V3h15v15zM7 17h13V4H7v13z"></path></svg>
-            <span class="btn-text">
-                You
-            </span>
-        </button>
-    </div>
-   
-
-<!-- ===============================================modified navbar ================================================ -->
-
-<div class="container2" style="display: none;">
-    <button onclick="window.location.href='you.html';" class="modibtn" title="You">
-        <span class="boldbtn-text" style=" padding-right: 8px;">
-            You
-        </span>
-        <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 16 16" width="16px" focusable="false" ><path d="M4.97 12.65 9.62 8 4.97 3.35l.71-.71L11.03 8l-5.35 5.35-.71-.7z"></path></svg>
-    </button>
-
-    <button onclick=" window.location.href='history.html';" class="modibtn" title="History">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" style="margin-right:24px" viewBox="0 0 24 24" width="24" focusable="false"><g><path d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM22 12c0 5.51-4.49 10-10 10S2 17.51 2 12h1c0 4.96 4.04 9 9 9s9-4.04 9-9-4.04-9-9-9C8.81 3 5.92 4.64 4.28 7.38c-.11.18-.22.37-.31.56L3.94 8H8v1H1.96V3h1v4.74c.04-.09.07-.17.11-.25.11-.22.23-.42.35-.63C5.22 3.86 8.51 2 12 2c5.51 0 10 4.49 10 10z"></path></g></svg>
-    <span class="btn-text" >
-        History
-    </span>
-</button>
-
-<button onclick=" window.location.href='watchlater.html';" class="modibtn" title="Watch Later">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" focusable="false" style="margin-right:24px"><path d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path></svg>
-    <span class="btn-text">
-        Watch Later
-    </span>
-</button>
-
-<button onclick=" window.location.href='liked.html';" class="modibtn" title="Liked videos">
-    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" focusable="false" style="margin-right:24px"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z"></path></svg>
-    <span class="btn-text">
-        Liked videos
-    </span>
-</button>
-</div>
-
-</div>
-
-
-
-
-
-
-    <div class="nav">
-  
-  
-      <div class="scroll-btn-left" >
-          <button class="scroll-btn" id="scrollLeftBtn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" focusable="false" ><path d="M14.96 18.96 8 12l6.96-6.96.71.71L9.41 12l6.25 6.25-.7.71z"></path></svg>
-          </button>
-      </div>
-  
-  
-  <div class="scroll-bar" id="scroll-bardiv">
-  
-    <div class="btncontainer">
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  <button class="catagory-btn">barcelona</button>
-  <button class="catagory-btn">tarak mehta</button>
-  <button class="catagory-btn">jethalal</button>
-  <button class="catagory-btn">daya</button>
-  <button class="catagory-btn">tipendra gada</button>
-  <button class="catagory-btn">champaklal jayantilal gada</button>
-  <button class="catagory-btn">sudarlal</button>
-  <button class="catagory-btn">daya ki  ma</button>
-  <button class="catagory-btn">anjali</button>
-  <button class="catagory-btn">babita</button>
-  <button class="catagory-btn">aiyar</button>
-  <button class="catagory-btn">bhije</button>
-  <button class="catagory-btn">ek mev secretary</button>
-  <button class="catagory-btn">sakharam</button>
-  </div>
-  
-  </div>
-  
-  <div class="scroll-btn-right">
-      <button class="scroll-btn" id="scrollRightBtn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" focusable="false" ><path d="m9.4 18.4-.7-.7 5.6-5.6-5.7-5.7.7-.7 6.4 6.4-6.3 6.3z"></path></svg>
-  </button>
-  </div>
-  
-    </div>
-   <div class="content-container">
-
-        <div class="vid-container">
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div><div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div><div class="box">
-                <video>
-                    <source src="chota.mp4" type="video/mp4">
-                </video>
-            </div>
-            
-            
-           
+        <!-- Password Input -->
+        <div class="form-group">
+            <label for="password">Password Input</label>
+            <input type="password" id="password" name="password">
         </div>
 
-  </div>
- 
+        <!-- Email Input -->
+        <div class="form-group">
+            <label for="email">Email Input</label>
+            <input type="email" id="email" name="email">
+        </div>
 
+        <!-- URL Input -->
+        <div class="form-group">
+            <label for="url">URL Input</label>
+            <input type="url" id="url" name="url">
+        </div>
 
-    
+        <!-- Telephone Input -->
+        <div class="form-group">
+            <label for="tel">Telephone Input</label>
+            <input type="tel" id="tel" name="tel">
+        </div>
 
+        <!-- Number Input -->
+        <div class="form-group">
+            <label for="number">Number Input</label>
+            <input type="number" id="number" name="number" min="1" max="100" step="1">
+        </div>
+
+        <!-- Date Input -->
+        <div class="form-group">
+            <label for="date">Date Input</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <!-- Time Input -->
+        <div class="form-group">
+            <label for="time">Time Input</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <!-- Datetime Local Input -->
+        <div class="form-group">
+            <label for="datetime-local">Datetime Local Input</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local">
+        </div>
+
+        <!-- Month Input -->
+        <div class="form-group">
+            <label for="month">Month Input</label>
+            <input type="month" id="month" name="month">
+        </div>
+
+        <!-- Week Input -->
+        <div class="form-group">
+            <label for="week">Week Input</label>
+            <input type="week" id="week" name="week">
+        </div>
+
+        <!-- Color Input -->
+        <div class="form-group">
+            <label for="color">Color Input</label>
+            <input type="color" id="color" name="color">
+        </div>
+
+        <!-- Range Input -->
+        <div class="form-group">
+            <label for="range">Range Input</label>
+            <input type="range" id="range" name="range" min="0" max="100" step="10">
+        </div>
+
+        <!-- Checkbox Input -->
+        <div class="form-group">
+            <label for="checkbox">Checkbox Input</label>
+            <input type="checkbox" id="checkbox" name="checkbox">
+        </div>
+
+        <!-- Radio Input -->
+        <div class="form-group">
+            <label>Radio Input</label>
+            <input type="radio" id="radio1" name="radio" value="option1">
+            <label for="radio1">Option 1</label>
+            <input type="radio" id="radio2" name="radio" value="option2">
+            <label for="radio2">Option 2</label>
+        </div>
+
+        <!-- File Input -->
+        <div class="form-group">
+            <label for="file">File Input</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <!-- Hidden Input -->
+        <input type="hidden" id="hidden" name="hidden" value="hiddenValue">
+
+        <!-- Search Input -->
+        <div class="form-group">
+            <label for="search">Search Input</label>
+            <input type="search" id="search" name="search">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </body>
-
 </html>
-
-
-<script>
- 
- document.getElementById('scrollLeftBtn').addEventListener('click', function() {
-    var scrollableDiv = document.getElementById('scroll-bardiv');
-    scrollableDiv.scrollLeft -= 200; // Scroll left by 200px
-});
-
-document.getElementById('scrollRightBtn').addEventListener('click', function() {
-    var scrollableDiv = document.getElementById('scroll-bardiv');
-    scrollableDiv.scrollLeft += 200; // Scroll right by 200px   
-});
-
-// Function to update the visibility of the left button based on the scroll position
-function updateLeftButtonVisibility() {
-    var leftButton = document.querySelector('.scroll-btn-left');
-    var rightButton = document.querySelector('.scroll-btn-right');
-    var scrollableDiv = document.getElementById('scroll-bardiv');
-    if(scrollableDiv.scrollLeft === 0) {
-        leftButton.style.display = 'none'; // Hide the left button if at the beginning
-    } else {
-        leftButton.style.display = ''; // Reset the display property to its default value
-    }
-   
-    if( scrollableDiv.scrollLeft > scrollableDiv.scrollWidth - scrollableDiv.clientWidth){
-            rightButton.style.display='none';
-    }
-    else{
-        rightButton.style.display='';
-    }
-
-
-      
-}
-
-// Initially set the visibility of the left button based on the scroll position
-updateLeftButtonVisibility();
-
-// Add an event listener to the scrollableDiv to update the visibility of the left button on scroll
-var scrollableDiv = document.getElementById('scroll-bardiv');
-scrollableDiv.addEventListener('scroll', function() {
-    updateLeftButtonVisibility();
-});
-
-
- // Get the input element
- var inputBox = document.querySelector('.search-div');
-    var svg = document.querySelector('.svgsrch');
-    var inputField = document.querySelector('.search-input input'); // Assuming the input field has a class 'search-input'
-    var removeSearchQueryButton = document.querySelector('.button-search-rmv');
-    
-    // Function to clear the input field's value
-    function clearInput() {
-        inputField.value = ''; // Clear the input field
-        inputField.focus(); // Keep focus on the input field after clearing
-        removeSearchQueryButton.style.display = 'none'; // Hide the remove search query button
-    }
-    
-    // Add an event listener to the input field for the "focus" event
-    inputField.addEventListener('focus', function(event) {
-        // This function will be called whenever the input field gains focus
-        // Add the "clicked" class to change CSS
-        inputBox.classList.add('clicked');
-        svg.style.display = '';
-        if (inputField.value.trim() !== '') {
-            // Show the remove search query button if the input field has a value
-            removeSearchQueryButton.style.display = '';
-        }
-    });
-    
-    // Add an event listener to the input field for the "blur" event
-    inputField.addEventListener('blur', function(event) {
-        // This function will be called whenever the input field loses focus
-        // Remove the "clicked" class to change CSS
-        inputBox.classList.remove('clicked');
-        svg.style.display = 'none';
-    });
-    
-    // Add an event listener to the input field for the "input" event
-    inputField.addEventListener('input', function(event) {
-        // Check if the input field has a value
-        if (inputField.value.trim() !== '') {
-            // Show the remove search query button if the input field has a value
-            removeSearchQueryButton.style.display = '';
-        } else {
-            // Hide the remove search query button if the input field is empty
-            removeSearchQueryButton.style.display = 'none';
-        }
-    });
-
-var width;
-    function changeStructure() {
-       
-        var navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('expanded');
-            var nav = document.querySelector('.nav');
-    var container = document.querySelector('.content-container');
-            var additionalContainer = document.querySelector('.container2');
-            var lastButton=document.querySelector("#you-btn");
-            if (width === undefined) {
-      
-        width = nav.clientWidth;
-    }
-
-            if (navbar.classList.contains('expanded')) {
-        lastButton.style.display = 'none';
-        additionalContainer.style.display = '';
-        
-
-        nav.style.left = '240px';
-        container.style.left = '240px';
-        nav.style.width = 'calc(' + width + 'px - 160px)';
-
-    } else {
-        additionalContainer.style.display = 'none';
-        lastButton.style.display = '';
-
-        nav.style.left = '';
-        container.style.left = '';
-        nav.style.width =width+'px';
-    }
-    
-   
-    
-}
-
-var currentPage = window.location.href;
-
-
-var buttons = document.querySelectorAll('.btn');
-var value;
-var path;
-
-buttons.forEach(function(button) {
-
-   
-value=button.getAttribute('onclick');
-if(value){
-
-    path = value.split("'")[1];
-
-    if (currentPage.includes(path)) {
-      
-        button.classList.add('hovered');
-    }
-}
-});
-var modibuttons = document.querySelectorAll('.modibtn');
-
-
-modibuttons.forEach(function(modibutton) {
-
-    value=modibutton.getAttribute('onclick');
-if(value){
-   
-   path = value.split("'")[1];
-   
-    if (currentPage.includes(path)) {
-       
-        modibutton.classList.add('hovered');
-    }
-}
-});
-
-
-
-    
-    </script>
-
-
-
-
-<style>
-  
-    :root{
-        --main-color: #0f0f0f;
-        --search-back:#121212;
-        --main-text: #ffffff;
-        --secondary-text:#aaa;
-        --hovered: #c2c2c233;
-        --actived:#c2c2c256;
-        --border:#303030;
-        
-    }
-
-    * {
-    background-color:var(--main-color);
-    color: var(--main-text);
-    font-family: Roboto, Noto, sans-serif;
-    font-size: 11px;
-}
-
-/*================================= header =================================== */
-
-.header {
-    background-color: inherit;
-    width: 100%;
-    height: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    margin: -7px;
-
-}
-
-/*==============================container to contain header items===========================*/
-.header>.container {
-    padding: 0px 16px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-
-/*==============================left side of container================================*/
-
-.header>.container>.start {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/*=================================options button=================================== */
-.start>.nav-btn {
-    width: 40px;
-    height: 40px;
-    border: none;
-    padding: 8px;
-    margin-right: 1px;
-}
-
-.start>.nav-btn svg {
-
-
-    fill: currentcolor;
-    background-color: transparent;
-
-}
-.start >.nav-btn:hover{
-    background-color: var(--hovered);
-    border-radius: 24px;
-}
-
-.start >.nav-btn:active
-{
-    background-color: var(--actived);
-}
-/*==================================youtube icon======================================*/
-.start>.icon {
-    padding: 18px 16px 18px 17.2px;
-    display: flex; 
-    align-items: center;
-    fill: currentcolor;
-    
-}
-
-.start > .icon > .Gtube > b{
-color: var(--main-text);
-font-family: Roboto, Noto, sans-serif;
-    font-size: 19px;
-     display: inline-block;
-    line-height: 17.98px; 
-    width: 56.19px;
-    margin-left: 1px;
-    padding-left: 1px;
-    
-}
-
-
-.start>.statecode {
-    color: var(--secondary-text);
-    margin: -22px 0 0 -11px;
-}
-
-a{
-    text-decoration: none;
-     user-select: none; /* This property denies text selection */
-        
-}
-/*======================================middle of container==============================*/
-.container>.center {
-    margin: 0 0 0 40px;
-    padding: 0 4px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/*=========================================Search box=====================================*/
-.center>.search-div {
-    width: 543px;
-    height:38.23px;
-    background-color: var(--search-back);
-    border: 0.1ch solid var(--border);
-    border-radius: 40px 0px 0px 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 4px 0 16px;
-    border-right: none;
-    margin-left: 32px;
-    
-    position: relative;
-
-}
-
-.center>.clicked{
-    border: 1px solid #1c62b9;
-   
-    margin-left: 0;
-    padding: 2px 4px 2px 48px;
-}
-/* ========================= autofill color adjust for crome or safari========================== */
-input:-webkit-autofill {
-    
-    /* Adjust background color */
-    -webkit-box-shadow: 0 0 0 1000px var(--search-back) inset !important;
-    /* Adjust text color */
-    -webkit-text-fill-color: var(--main-text) !important;
-    -webkit-text-size-adjust: 16px;
-}
-
-
-/*================================ inputbox================================= */
-.search-form{
-    height: 38px;
-    width: 504px;
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.center >.search-div>.svgsrch{
-    fill: currentcolor;
-    background-color: transparent;
-    padding: 0 12px 0 16px;
-    justify-content: flex-start;
-    position: absolute; 
-    left: 0; 
-  
-}
-
-.search-input{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background: transparent;
-}
-
-.center input {
-    background-color: var(--search-back) !important;
-    box-shadow: none;
-    outline: none;
-    font-family: Roboto, Noto, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: var(--main-text);
-    padding: 1px 0;
-    margin: 0;
-    width: 255%;
-    border: none;
-}
-
-.center >.search-div >.search-input> .remove-search-query{
-    display: flex;
-    background-color: transparent;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.center >.search-div >.search-input> .remove-search-query >.button-search-rmv{
-    background-color: var(--search-back) !important;
-    width: 38.8px;
-    height: 38.8px;
-    border: none;
-    padding: 0;
-    right: 0;
-   
-    
-}
-
-.center >.search-div > .search-input>.remove-search-query >.button-search-rmv:hover{
-    background-color: var(--hovered)!important;
-    border-radius: 50%;
-}
-
-.center > .search-div > .search-input>.remove-search-query> .button-search-rmv svg {
-    fill: currentcolor;
-    background-color: transparent;
-  
-}
-
-
-/*=============================search button=======================*/
-.center>.btn-search {
-    width: 64px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 0 40px 40px 0;
-    margin-right: 4px;
-    border: 0.1ch solid #303030;
-    padding: 0;
-
-}
-
-.center>.btn-search svg {
-
-
-    fill: currentcolor;
-    background-color: transparent;
-
-}
-
-.center >.btn-search:hover::after{/* tooltip edit */
-    content: attr(btn-title);
-    background-color:  #4b4b4be3;
-    color: var(--main-text);
-    position: fixed;
-   border-radius: 4px; 
- top: 9%;
- left: 66%;
-    padding: 8px;
-    transform: translateX(-50%);
-    z-index: 1000;
-    font-size: 12px;
-    line-height: 20px;
-
-}
-/*===============================mike search==============================*/
-.center>.mike-btn {
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff14;
-    border-radius: 24px;
-    margin-left: 12px;
-    border: none;
-    padding: 0;
-    position: relative;
-
-}
-
-.center>.mike-btn svg {
-
-
-    fill: currentcolor;
-    background-color: transparent;
-
-}
-.center >.mike-btn:hover{
-    background-color: var(--hovered);
-    border-color: transparent;
-}
-
-.center >.mike-btn:active
-{
-    background-color: var(--actived);
-}
-
-.center >.mike-btn:hover::after{
-    content: attr(btn-title);
-    background-color:  #4b4b4be3;
-    color: var(--main-text);
-   
-    position: fixed;
-   border-radius: 4px; 
- top: 9%;
- left: 71%;
-    padding: 8px;
-    transform: translateX(-50%);
-    z-index: 1;
-    font-size: 12px;
-    line-height: 20px;
-
-} 
-
-/*=====================================Right side of container============================*/
-.end {
-    height: 40px;
-    width: 187px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-/*================================upload button===================================*/
-.end>.upload-btn {
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
-    padding: 8px;
-    border: none;
-}
-
-.end>.upload-btn svg {
-    fill: currentcolor;
-    background-color: transparent;
-
-}
-.end >.upload-btn:hover{
-    background-color: var(--hovered);
-    border-radius: 24px;
-}
-
-.start >.nav-btn:active{
-    background-color: var(--actived);
-}
-
-.end >.upload-btn:hover::after{
-    content: attr(btn-title);
-    background-color:  #4b4b4be3;
-    color: var(--main-text);
-    display: block;
-    position: fixed;
-   border-radius: 4px; 
- top: 9%;
- left: 89.8%;
-    padding: 8px;
-    transform: translateX(-50%);
-    z-index: 1000;
-    font-size: 12px;
-    line-height: 20px;
-
-}
-
-
-/*================================notifications button===============================*/
-.end>.notification-btn {
-    width: 40px;
-    height: 40px;
-    border: none;
-    margin-right: 8px;
-
-
-
-}
-
-.end>.notification-btn svg {
-    fill: currentcolor;
-    background-color: transparent;
-}
-
-.end >.notification-btn:hover{
-    background-color: var(--hovered);
-    border-radius: 24px;
-}
-
-.start >.nav-btn:active{
-    background-color: var(--actived);
-}
-
-
-.end >.notification-btn:hover::after{
-    content: attr(btn-title);
-    background-color:  #4b4b4be3;
-    color: var(--main-text);
-    
-    position: fixed;
-   border-radius: 4px; 
- top: 9%;
- left: 93%;
-    padding: 8px;
-    transform: translateX(-50%);
-    z-index: 1000;
-    font-size: 12px;
-    line-height: 20px;
-
-}
-
-
-/*=========================================profile=================================*/
-.end>.prof-btn {
-    width: 60px;
-    height: 34px;
-    border: 0px;
-    padding: 1px 6px;
-    margin: 0 8px;
-
-}
-
-.end>.prof-btn img {
-    width: 32px;
-    height: 32px;
-    margin: 0px 8px;
-    border: 0px;
-    border-radius: 24px;
-}
-
-
-/* ===============================navbar============================ */
-
-.navbar {
-    background-color: inherit;
-    /* width: 72px; */
-   padding: 0 4px;
-    position: fixed;
-    left: 0;
-    /* Align to left */
-    top: 56px;
-    /* Align to top */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: none;
-    z-index: 1;
-    align-items: center;
-}
-
-.navbar>.container {
-    margin-top: 4px;
-    /* width: 64px;
-    height: 296px; */
-    
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: none;
-    
-}
-.navbar > .container >.btn{
-    padding: 16px 0 14px;
-    width: 67px;
-    height: 74px;
-    border: none;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-}
-
-
-.navbar>.container> .btn > svg {
-    
-    fill: currentcolor;
-    background-color: transparent;
-}
-
-.navbar >.container > .btn:hover{
-    background-color: var(--hovered);
-    border-radius: 8px;
-}
-
-.navbar >.container > .btn:active{
-    background-color: var(--actived);
-   
-}
-
-
-.navbar > .container >.btn >.btn-text {
-    color: var(--main-text);
-    font-family: "Roboto","Arial",sans-serif;
-    background-color: transparent;
-    line-height: 1.4rem;
-    
-}
-
-
-.expanded{
-    width: 240px;
-    
-}
-
-.expanded::after{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    visibility: visible;
-    width: 20px;
-    content: "";
-}
-
-.expanded >.container{
-    
-padding: 12px;
-border-bottom: 1px solid var(--border);
-}
-
-.expanded >.container > .btn{
-    width: 204px;
-            height: 40px;
-            padding: 0 12px;
-            display: flex;
-            flex-direction: row;
-              justify-content: flex-start;
-              text-decoration: none;
-            
-          
-}
-
-
-
-.expanded >.container >.btn> svg{
-    margin-right: 24px;
-}
-
-.expanded >.container >.btn > .btn-text{
-    line-height: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    /* flex: 1; */
-    flex-basis: 0.000000001px;
-    margin-right: 10px;
-}
-
-
-.container2{
-    padding-top: 12px;
-    height: 172.8px;
-    display: flex;
-    flex-direction: column;
-   border-bottom: 1px solid var(--border) ;
-}
-.expanded > .container2 >.modibtn{
-    width: 204px;
-            height: 40px;
-            padding: 0 12px;
-            display: flex;
-            flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              margin: 0;
-              border: none;
-}
-.expanded >.container2 >.modibtn> svg{
-    fill: currentcolor;
-    background-color: transparent;
-    
-}
-.expanded >.container2>.modibtn>.boldbtn-text{
-    color: var(--main-text);
-    font-family: "Roboto", Arial, sans-serif;
-    background-color: transparent;
-    font-size: 1.7rem;
-    line-height: 2rem;
-    font-weight: 520;
-   
-}
-.expanded>.container > .btn.hovered{
-    background-color: #c2c2c233;
-    border-radius: 8px;
-}
-.expanded>.container > .btn.hovered:hover{
-    background-color: #d3d3d348;
-    border-radius: 8px;
-}
-
-
-
-.expanded>.container2 > .modibtn.hovered{
-    background-color: var(--hovered);
-    border-radius: 8px;
-}
-
-.expanded>.container2>.modibtn:hover{
-    background-color: var(--hovered);
-    border-radius: 8px;
-}
-
-.expanded > .container2 >.modibtn >.btn-text {
-    color: var(--main-text);
-    font-family: "Roboto","Arial",sans-serif;
-    background-color: transparent;
-    margin-right: 10px; 
-    line-height: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    /* flex: 1; */
-    
-}
-
-
-.content-container{
-  width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: transparent;
-    display: flex;
-    top: 118px;
-    left: 80px;
-    flex-direction: row;
-    overflow-y: hidden;
-}
-
-  .nav{
-   
-    width:1625px;
-    height: 60px;
-    position: fixed;
-    background-color: black;
-    top: 58px;
-    left: 80px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .nav>.scroll-bar{
-    height: 60px;
-    width: auto;
-  display: inline-flex;
-  flex-direction: row;
-justify-content: space-between;
-align-items: center;
-/* z-index: 1; */
-    overflow-x: hidden;
-    -ms-overflow-style: none;    /*for internet explorer*/
-   scrollbar-width: none;
-    scroll-behavior: smooth;
-  }
-
-
-  .btncontainer{
-    padding: 0 24px;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-  }
-  .nav>.scroll-bar>.btncontainer>.catagory-btn{
-    width: auto;
-    height: 40px;
-    text-align: center;
-    justify-items: center;
-    white-space: nowrap;
-    border:none;
-    border-radius: 8px;
-    margin: 12px;
-    margin-left: 0;
-    background-color: var(--hovered);
-    font-family: "Roboto", "Arial", sans-serif;
-    font-size: 1.4rem;
-    line-height: 2rem;
-    font-weight: 500;
-    
-  }
-  .scroll-btn{
-  background-color: transparent;
-    width: 40px;
-    height: 40px;
-    border: none;
-    display: flex;
-    align-items: center;
-    padding: 2px;
-  }
-
-  .scroll-btn:hover{
-    background-color: #5a5a5a;
-    border-radius: 50%;
-  }
-
-  .scroll-btn> svg{
-  fill: white;
-    background-color: transparent;
-  }
-  .btn2{
-    border: none;
-    border-radius: 50%;
-    background-color: #5a5a5a;
-  }
-
-  .nav>.scroll-btn-right{
-    display: flex;
-    width:106px;
-    height: 100%;
-    z-index: 1000000;
-    position: absolute;
-    align-items: center;
-    justify-content: flex-end;
-    right: 11px;
-    background:linear-gradient(to left,#0f0f0f 35%,#21212100 65%);
-  } 
-.nav>.scroll-btn-left{
-    display: flex;
-    width: 106px;
-    height: 100%;
-    left: 0;
-   z-index: 1000000;
-   justify-content: flex-start;
-    position: absolute;
-    align-items: center;
-    background: linear-gradient(to right,#0f0f0f 35%,#21212100 65%);
-  }
-
-.content-container >.vid-container{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-   margin: 0 16px;
-    flex-direction: row;
-  }
-
-  .content-container >.vid-container>.box{
-    width:391.31px;
-    height: 320.11px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .navbar.expanded ~ .content-container
-  .navbar.expanded ~ .nav
-  {
-    left: 240px; 
-    width: calc(100% - 240px);
-   
-}
-.navbar.expanded ~.nav>.scroll-btn-left{
-    left:8px;
-}
-
-
-
-
-@media (max-width: 1400px) {
-
-.content-container {
-   
-    width: 95%;
-}
-.nav {
-   
-    width: 95%;
-}
-.nav>.scroll-btn-righ{
-    right:0;
-}
-}
-
-
-
-  @media (max-width: 768px) {
-
-    .content-container {
-        left: 73px;
-        width: 91%;
-    }
-    .nav {
-       
-        width: 91%;
-    }
-
-}
-
-@media (max-width:400px){
-
-
- .content-container {
-       
-        width: 84%;
-    }
-    .nav {
-       
-        width: 84%;
-    }
-
-}
-</style>
