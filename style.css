@@ -1769,6 +1769,19 @@ right:0;
 
     @media (max-width:400px){
 
+        .cont-container>.selected-vid {
+            width: 100%;
+            height: 58%;
+            left: 0px;
+            top: 57px;
+        }
+        .cont-container>.selected-vid>.vid-box {
+
+            width: 100%;
+            height: 66%;
+            
+        }
+
 
         .header>.container{
             width: 96%;
@@ -1828,7 +1841,7 @@ right:0;
     }
 
     .navbar > .container > #upload-btn-mobile{
-        display: flex;
+        display: block;
 
     }
 

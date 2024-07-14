@@ -1,3 +1,56 @@
+//search button 400px screen
+var srchBtn=document.querySelector('.btn-search');
+var srchCover = document.querySelector('.search-cover');
+var srchDiv = document.querySelector('.search-div');
+var startDiv=document.querySelector('.start');
+var endDiv=document.querySelector('.end');
+var mikeBtn=document.querySelector('.mike-btn');
+var centerDiv=document.querySelector('.center');
+var backBtn=document.querySelector('.back-btn');
+srchBtn.addEventListener('click', function() {
+
+   
+    if (window.innerWidth <= 400) {
+
+        srchCover.style.display='';
+        srchDiv.style.display='flex';
+        srchDiv.style.marginLeft='1pc';
+        startDiv.style.display='none';
+        endDiv.style.display='none';
+        srchBtn.style.backgroundColor='rgba(255, 255, 255, 0.08)';
+        // srchDiv.style.position='fixed';
+        srchBtn.style.width='64px';
+        mikeBtn.style.display='block';
+        centerDiv.style.margin='0';
+        srchBtn.style.margin='0';
+        srchBtn.style.border = '0.1ch #303030';
+srchBtn.style.borderStyle = 'solid'; // Explicitly set border-style to solid
+backBtn.style.display='';
+
+    }else{
+    srchCover.style.display='none';
+}
+
+
+
+});
+
+function hideCover(){
+    srchCover.style.display='none';
+srchDiv.style.display='';
+srchDiv.style.marginLeft='';
+startDiv.style.display='';
+endDiv.style.display='';
+srchBtn.style.backgroundColor='';
+// srchDiv.style.position='fixed';
+srchBtn.style.width='';
+mikeBtn.style.display='';
+centerDiv.style.margin='';
+srchBtn.style.margin='';
+srchBtn.style.borderStyle = 'none';
+backBtn.style.display='none';
+}
+
 
  // loading visibility
  document.addEventListener('DOMContentLoaded', function() {
